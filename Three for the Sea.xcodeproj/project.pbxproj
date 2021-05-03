@@ -93,8 +93,10 @@
 		ACA0C19F2640A38E00AF5A1E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = OBP;
 				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
+				ORGANIZATIONNAME = "Ocean Blue Project";
 				TargetAttributes = {
 					ACA0C1A62640A38E00AF5A1E = {
 						CreatedOnToolsVersion = 12.5;
