@@ -12,19 +12,19 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     // MARK: - Properties
     
     let pages: [OnboardingPage] =
-        [OnboardingPage(imageName: "",
+        [OnboardingPage(imageName: "onboarding0",
                         title: "Ocean Blue Mission",
                         description: "Join us for a mission that's as vast, critical, and inspiring as the Ocean itself.",
                         buttonText: "Join Us!"),
-        OnboardingPage(imageName: "",
+        OnboardingPage(imageName: "onboarding1",
                        title: "One World Ocean",
                        description: "Every stream and ocean is part of a single global ecosystem. One World Ocean.",
                        buttonText: "Get Ready!"),
-        OnboardingPage(imageName: "",
+        OnboardingPage(imageName: "onboarding2",
                        title: "Pick up 3 for the Sea",
                        description: "Pick up at least 3 pieces of plastic daily at your neighborhood park, river, beach, or sidewalk and keep track of your impact!",
                        buttonText: "Get Set!"),
-        OnboardingPage(imageName: "",
+        OnboardingPage(imageName: "onboarding3",
                        title: "Save the Ocean Together",
                        description: "Request a cleanup and Ocean Blue Project can help you organize a cleanup at your local beach or river!",
                        buttonText: "Go!")]
@@ -94,6 +94,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         let nextPage = pageControl.currentPage + 1
         
         guard nextPage < pages.count else {
+            // TODO: - Call Home ViewController
             print("End of pages. Load new VC")
             return
         }
@@ -113,7 +114,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         let title = pages[pageControl.currentPage].buttonText
         
         self.advanceButton.setTitle(title, for: .normal)
-        print("button should be \(title)")
     }
 }
 

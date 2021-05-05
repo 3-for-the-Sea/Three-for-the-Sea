@@ -14,6 +14,7 @@ class OnboardingCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionTextView: UITextView!
+    @IBOutlet weak var imageView: UIImageView!
     
     
     // MARK: - Lifecycle
@@ -25,6 +26,10 @@ class OnboardingCollectionViewCell: UICollectionViewCell {
     func configureCell(page: OnboardingPage) {
         titleLabel.text = page.title
         descriptionTextView.text = page.description
+        
+        guard let image = UIImage(named: page.imageName) else { return }
+        
+        imageView.image = image
     }
 
 }
