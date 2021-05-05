@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -48,21 +49,21 @@
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="78" id="XbV-FV-gXw"/>
                                 </constraints>
-                                <color key="pageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="currentPageIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="pageIndicatorTintColor" name="OBPBlueFaded"/>
+                                <color key="currentPageIndicatorTintColor" name="OBPBlue"/>
                                 <connections>
                                     <action selector="pageControlChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="vNY-wh-rVh"/>
                                 </connections>
                             </pageControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q13-dT-Ze6">
                                 <rect key="frame" x="41.5" y="796" width="331" height="42"/>
-                                <color key="backgroundColor" red="0.15686274509803921" green="0.16078431372549018" blue="0.36862745098039218" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" name="OBPBlue"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="UV2-i8-mMO"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Raleway-Bold" family="Raleway" pointSize="17"/>
                                 <state key="normal" title="Let's Go">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="advanceButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6iV-Mn-IGU"/>
@@ -95,6 +96,12 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="OBPBlue">
+            <color red="0.18431372549019609" green="0.69411764705882351" blue="0.75294117647058822" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="OBPBlueFaded">
+            <color red="0.18431372549019609" green="0.69411764705882351" blue="0.75294117647058822" alpha="0.15798267814683617" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
