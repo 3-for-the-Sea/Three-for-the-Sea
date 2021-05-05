@@ -18,33 +18,38 @@
                 <rect key="frame" x="0.0" y="0.0" width="300" height="600"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bgd-sq-LfW">
-                        <rect key="frame" x="0.0" y="0.0" width="300" height="389"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bgd-sq-LfW">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="417"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S4j-9J-zQ4">
-                        <rect key="frame" x="125.5" y="444" width="49.5" height="30"/>
+                        <rect key="frame" x="125.5" y="437" width="49.5" height="30"/>
                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Let's clean up the ocean." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ISy-qR-VjH">
-                        <rect key="frame" x="30" y="498" width="240" height="73"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Let's clean up the ocean." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ISy-qR-VjH">
+                        <rect key="frame" x="30" y="482" width="240" height="73"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="73" id="tjS-jB-2Ge"/>
+                        </constraints>
                         <color key="textColor" systemColor="labelColor"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     </textView>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstItem="bgd-sq-LfW" firstAttribute="height" secondItem="ZTg-uK-7eu" secondAttribute="height" multiplier="0.7" id="9J4-U6-I3Q"/>
+                <constraint firstItem="bgd-sq-LfW" firstAttribute="height" secondItem="ZTg-uK-7eu" secondAttribute="height" multiplier="0.75" id="9J4-U6-I3Q"/>
                 <constraint firstItem="bgd-sq-LfW" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="FCy-wj-CrP"/>
                 <constraint firstItem="bgd-sq-LfW" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="R7l-wY-DNe"/>
+                <constraint firstItem="ISy-qR-VjH" firstAttribute="width" secondItem="ZTg-uK-7eu" secondAttribute="width" multiplier="0.8" id="Uk9-ix-0Hl"/>
+                <constraint firstItem="ISy-qR-VjH" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="aiV-Gl-NZo"/>
                 <constraint firstItem="S4j-9J-zQ4" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="beh-6i-ZUk"/>
-                <constraint firstItem="S4j-9J-zQ4" firstAttribute="top" secondItem="bgd-sq-LfW" secondAttribute="bottom" constant="55" id="pxH-pO-UoX"/>
+                <constraint firstItem="S4j-9J-zQ4" firstAttribute="top" secondItem="bgd-sq-LfW" secondAttribute="bottom" constant="20" id="pxH-pO-UoX"/>
                 <constraint firstAttribute="trailing" secondItem="bgd-sq-LfW" secondAttribute="trailing" id="rdq-Y1-dNg"/>
+                <constraint firstItem="ISy-qR-VjH" firstAttribute="top" secondItem="S4j-9J-zQ4" secondAttribute="bottom" constant="15" id="sU0-nI-ejh"/>
             </constraints>
             <connections>
                 <outlet property="descriptionTextView" destination="ISy-qR-VjH" id="0qg-jk-5zd"/>

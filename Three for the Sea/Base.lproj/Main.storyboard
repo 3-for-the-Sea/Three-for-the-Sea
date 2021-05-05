@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="TK4-N6-Q9N">
-                                <rect key="frame" x="0.0" y="44" width="414" height="630"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="671"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="UP4-ZL-vhK">
                                     <size key="itemSize" width="128" height="128"/>
@@ -39,7 +39,7 @@
                                 </cells>
                             </collectionView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="7go-vG-8EY">
-                                <rect key="frame" x="137.5" y="689" width="139" height="27.5"/>
+                                <rect key="frame" x="137.5" y="758.5" width="139" height="27.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="78" id="XbV-FV-gXw"/>
                                 </constraints>
@@ -50,7 +50,7 @@
                                 </connections>
                             </pageControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q13-dT-Ze6">
-                                <rect key="frame" x="24" y="796" width="366" height="42"/>
+                                <rect key="frame" x="41.5" y="796" width="331" height="42"/>
                                 <color key="backgroundColor" red="0.15686274509803921" green="0.16078431372549018" blue="0.36862745098039218" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="UV2-i8-mMO"/>
@@ -68,14 +68,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="TK4-N6-Q9N" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="3YX-d1-aSE"/>
-                            <constraint firstItem="TK4-N6-Q9N" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.77" id="4st-Hg-tyT"/>
+                            <constraint firstItem="TK4-N6-Q9N" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.82" id="4st-Hg-tyT"/>
+                            <constraint firstItem="q13-dT-Ze6" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="FC2-1m-I1f"/>
                             <constraint firstItem="TK4-N6-Q9N" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QIL-cm-8cl"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="q13-dT-Ze6" secondAttribute="bottom" constant="24" id="SHc-fm-O2w"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TK4-N6-Q9N" secondAttribute="trailing" id="TMM-Kj-svK"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="q13-dT-Ze6" secondAttribute="trailing" constant="24" id="XWG-Fl-ZDI"/>
-                            <constraint firstItem="q13-dT-Ze6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="Zdt-WF-Oww"/>
+                            <constraint firstItem="q13-dT-Ze6" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.8" id="iO8-oh-18a"/>
                             <constraint firstItem="7go-vG-8EY" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="jw4-ea-imh"/>
-                            <constraint firstItem="7go-vG-8EY" firstAttribute="top" secondItem="TK4-N6-Q9N" secondAttribute="bottom" constant="15" id="q9d-UK-Kq1"/>
+                            <constraint firstItem="q13-dT-Ze6" firstAttribute="top" secondItem="7go-vG-8EY" secondAttribute="bottom" constant="10" id="q9d-UK-Kq1"/>
                         </constraints>
                     </view>
                     <connections>

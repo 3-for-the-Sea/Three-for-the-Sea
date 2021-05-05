@@ -41,7 +41,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        advanceButton.layer.cornerRadius = 20
+        advanceButton.layer.cornerRadius = 18
         
         collectionView.backgroundColor = .white
         collectionView.dataSource = self
