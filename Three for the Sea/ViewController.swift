@@ -18,7 +18,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                         buttonText: "Join Us!"),
         OnboardingPage(imageName: "onboarding1",
                        title: "One World Ocean",
-                       description: "Every stream and ocean is part of a single global ecosystem. One World Ocean.",
+                       description: "Every stream, river, and ocean is part of a single global ecosystem: One World Ocean.",
                        buttonText: "Get Ready!"),
         OnboardingPage(imageName: "onboarding2",
                        title: "Pick up 3 for the Sea",
