@@ -12,10 +12,22 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     // MARK: - Properties
     
     let pages: [OnboardingPage] =
-        [OnboardingPage(imageName: "", title: "Ocean Blue Mission", description: "Join us for a mission that's as vast, critical, and inspiring as the Ocean itself."),
-        OnboardingPage(imageName: "", title: "One World Ocean", description: "Every stream and ocean is part of a single global ecosystem. One World Ocean."),
-        OnboardingPage(imageName: "", title: "Pick up 3 for the Sea", description: "Pick up at least 3 pieces of plastic daily at your neighborhood park, river, beach, or sidewalk and keep track of your impact!"),
-        OnboardingPage(imageName: "", title: "Save the Ocean Together", description: "Request a cleanup and Ocean Blue Project can help you organize a cleanup at your local beach or river!")]
+        [OnboardingPage(imageName: "",
+                        title: "Ocean Blue Mission",
+                        description: "Join us for a mission that's as vast, critical, and inspiring as the Ocean itself.",
+                        buttonText: "Join Us!"),
+        OnboardingPage(imageName: "",
+                       title: "One World Ocean",
+                       description: "Every stream and ocean is part of a single global ecosystem. One World Ocean.",
+                       buttonText: "Get Ready!"),
+        OnboardingPage(imageName: "",
+                       title: "Pick up 3 for the Sea",
+                       description: "Pick up at least 3 pieces of plastic daily at your neighborhood park, river, beach, or sidewalk and keep track of your impact!",
+                       buttonText: "Get Set!"),
+        OnboardingPage(imageName: "",
+                       title: "Save the Ocean Together",
+                       description: "Request a cleanup and Ocean Blue Project can help you organize a cleanup at your local beach or river!",
+                       buttonText: "Go!")]
     
     
     // MARK: - Outlets
@@ -37,6 +49,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         collectionView.register(UINib(nibName: "OnboardingCollectionViewCell", bundle: Bundle.main), forCellWithReuseIdentifier: "OnboardingCollectionViewCell")
         
         pageControl.numberOfPages = pages.count
+        
+        updateButtonTitle()
     }
     
     
@@ -60,6 +74,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         pageControl.currentPage = Int(scrollView.contentOffset.x) / Int(scrollView.frame.width)
+        
+        updateButtonTitle()
     }
     
     
@@ -75,8 +91,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     @IBAction func advanceButtonTapped(_ sender: Any) {
         
-        print("Onboarding: Advance button tapped")
-        
         let nextPage = pageControl.currentPage + 1
         
         guard nextPage < pages.count else {
@@ -89,8 +103,17 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                                     animated: true)
         
         pageControl.currentPage = nextPage
+        updateButtonTitle()
     }
     
     
+    // MARK: - Helpers
+    
+    private func updateButtonTitle() {
+        let title = pages[pageControl.currentPage].buttonText
+        
+        self.advanceButton.setTitle(title, for: .normal)
+        print("button should be \(title)")
+    }
 }
 
