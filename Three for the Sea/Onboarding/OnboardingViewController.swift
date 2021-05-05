@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  OnboardingViewController.swift
 //  Three for the Sea
 //
 //  Created by Theo Vora on 5/3/21.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class OnboardingViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     // MARK: - Properties
     
