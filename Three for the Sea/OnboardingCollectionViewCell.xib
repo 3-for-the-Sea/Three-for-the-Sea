@@ -27,7 +27,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Let's clean up the ocean." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ISy-qR-VjH">
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Let's clean up the ocean." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ISy-qR-VjH">
                         <rect key="frame" x="30" y="482" width="240" height="73"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
