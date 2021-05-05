@@ -76,6 +76,19 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     @IBAction func advanceButtonTapped(_ sender: Any) {
         
         print("Onboarding: Advance button tapped")
+        
+        let nextPage = pageControl.currentPage + 1
+        
+        guard nextPage < pages.count else {
+            print("End of pages. Load new VC")
+            return
+        }
+        
+        collectionView.scrollToItem(at: IndexPath(item: nextPage, section: 0),
+                                    at: .centeredHorizontally,
+                                    animated: true)
+        
+        pageControl.currentPage = nextPage
     }
     
     
