@@ -20,6 +20,27 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Raleway-Black.ttf</string>
+		<string>Raleway-BlackItalic.ttf</string>
+		<string>Raleway-Bold.ttf</string>
+		<string>Raleway-BoldItalic.ttf</string>
+		<string>Raleway-ExtraBold.ttf</string>
+		<string>Raleway-ExtraBoldItalic.ttf</string>
+		<string>Raleway-ExtraLight.ttf</string>
+		<string>Raleway-ExtraLightItalic.ttf</string>
+		<string>Raleway-Italic.ttf</string>
+		<string>Raleway-Light.ttf</string>
+		<string>Raleway-LightItalic.ttf</string>
+		<string>Raleway-Medium.ttf</string>
+		<string>Raleway-MediumItalic.ttf</string>
+		<string>Raleway-Regular.ttf</string>
+		<string>Raleway-SemiBold.ttf</string>
+		<string>Raleway-SemiBoldItalic.ttf</string>
+		<string>Raleway-Thin.ttf</string>
+		<string>Raleway-ThinItalic.ttf</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -43,8 +64,6 @@
 	<true/>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
-	<key>UIMainStoryboardFile</key>
-	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
@@ -59,27 +78,6 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
-	</array>
-	<key>UIAppFonts</key>
-	<array>
-		<string>Raleway-Black.ttf</string>
-		<string>Raleway-BlackItalic.ttf</string>
-		<string>Raleway-Bold.ttf</string>
-		<string>Raleway-BoldItalic.ttf</string>
-		<string>Raleway-ExtraBold.ttf</string>
-		<string>Raleway-ExtraBoldItalic.ttf</string>
-		<string>Raleway-ExtraLight.ttf</string>
-		<string>Raleway-ExtraLightItalic.ttf</string>
-		<string>Raleway-Italic.ttf</string>
-		<string>Raleway-Light.ttf</string>
-		<string>Raleway-LightItalic.ttf</string>
-		<string>Raleway-Medium.ttf</string>
-		<string>Raleway-MediumItalic.ttf</string>
-		<string>Raleway-Regular.ttf</string>
-		<string>Raleway-SemiBold.ttf</string>
-		<string>Raleway-SemiBoldItalic.ttf</string>
-		<string>Raleway-Thin.ttf</string>
-		<string>Raleway-ThinItalic.ttf</string>
 	</array>
 </dict>
 </plist>
