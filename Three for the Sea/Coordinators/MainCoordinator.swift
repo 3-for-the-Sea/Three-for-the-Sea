@@ -22,7 +22,20 @@ class MainCoordinator: Coordinator {
         let storyboardName = "Main"
         let storyboard = UIStoryboard(name: storyboardName, bundle: nil)
         let onboardingVC: OnboardingViewController = storyboard.instantiateViewController(identifier: "OnboardingViewController")
+        onboardingVC.delegate = self
         
         navigationController.setViewControllers([onboardingVC], animated: true)
+    }
+}
+
+extension MainCoordinator: OnboardingCoordinatorDelegate {
+    func didFinish() {
+        
+        let storyboardName = "Main"
+        let storyboard = UIStoryboard(name: storyboardName, bundle: nil)
+        let tabBarController: UITabBarController = storyboard.instantiateViewController(identifier: "tabBarController")
+        tabBarController.selectedIndex = 0
+        
+        navigationController.setViewControllers([tabBarController], animated: true)
     }
 }

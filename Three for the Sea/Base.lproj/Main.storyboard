@@ -104,7 +104,7 @@
                         <viewLayoutGuide key="safeArea" id="Iyz-c4-kab"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" id="xiN-ma-gkQ"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="xiN-ma-gkQ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lda-da-gVr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -118,9 +118,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="uw8-hs-WkD"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="OBPBlue"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="cMN-ev-7Zz"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="cMN-ev-7Zz"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="00K-Fe-Nfu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -146,6 +146,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <namedColor name="OBPBlue">
             <color red="0.18400000035762787" green="0.6940000057220459" blue="0.75300002098083496" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

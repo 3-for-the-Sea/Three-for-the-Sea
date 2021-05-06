@@ -7,9 +7,15 @@
 
 import UIKit
 
+protocol OnboardingCoordinatorDelegate: AnyObject {
+    func didFinish()
+}
+
 class OnboardingViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     // MARK: - Properties
+    
+    weak var delegate: OnboardingCoordinatorDelegate?
     
     let pages: [OnboardingPage] =
         [OnboardingPage(imageName: "onboarding0",
@@ -94,8 +100,7 @@ class OnboardingViewController: UIViewController, UICollectionViewDataSource, UI
         let nextPage = pageControl.currentPage + 1
         
         guard nextPage < pages.count else {
-            // TODO: - Call Home ViewController
-            print("End of pages. Load new VC")
+            delegate?.didFinish()
             return
         }
         
