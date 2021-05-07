@@ -19,23 +19,45 @@ class MainCoordinator: Coordinator {
     func start() {
         print("MainCoordinator started")
         
-        let storyboardName = "Main"
-        let storyboard = UIStoryboard(name: storyboardName, bundle: nil)
-        let onboardingVC: OnboardingViewController = storyboard.instantiateViewController(identifier: "OnboardingViewController")
-        onboardingVC.delegate = self
+        // Show Onboarding only if this is the user's first time
+        let defaults = UserDefaults.standard
+        let hasCompletedOnboarding = defaults.bool(forKey: "hasCompletedOnboarding")
         
-        navigationController.setViewControllers([onboardingVC], animated: true)
+        switch hasCompletedOnboarding {
+        
+        case false:
+            
+            let storyboardName = "Main"
+            let storyboard = UIStoryboard(name: storyboardName, bundle: nil)
+            let onboardingVC: OnboardingViewController = storyboard.instantiateViewController(identifier: "OnboardingViewController")
+            onboardingVC.delegate = self
+            
+            navigationController.setViewControllers([onboardingVC], animated: true)
+            
+        case true:
+            
+            launchHomeTabVC()
+        }
+        
+        
     }
-}
-
-extension MainCoordinator: OnboardingCoordinatorDelegate {
-    func didFinish() {
-        
+    
+    private func launchHomeTabVC() {
         let storyboardName = "Main"
         let storyboard = UIStoryboard(name: storyboardName, bundle: nil)
         let tabBarController: UITabBarController = storyboard.instantiateViewController(identifier: "tabBarController")
         tabBarController.selectedIndex = 0
         
         navigationController.setViewControllers([tabBarController], animated: true)
+    }
+}
+
+extension MainCoordinator: OnboardingCoordinatorDelegate {
+    func didFinish() {
+        
+        let defaults = UserDefaults.standard
+        defaults.setValue(true, forKey: "hasCompletedOnboarding")
+        
+        launchHomeTabVC()
     }
 }
