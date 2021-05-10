@@ -36,6 +36,7 @@
 		ACA0C1B22640A38E00AF5A1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACA0C1B02640A38E00AF5A1E /* Main.storyboard */; };
 		ACA0C1B42640A39100AF5A1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACA0C1B32640A39100AF5A1E /* Assets.xcassets */; };
 		ACA0C1B72640A39100AF5A1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACA0C1B52640A39100AF5A1E /* LaunchScreen.storyboard */; };
+		ACB83EBE2649AEC1000526A1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB83EBD2649AEC1000526A1 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 		ACA0C1B32640A39100AF5A1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACA0C1B62640A39100AF5A1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ACA0C1B82640A39100AF5A1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACB83EBD2649AEC1000526A1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 				AC49B7182643462000FF3F60 /* Onboarding */,
 				ACA0C1AA2640A38E00AF5A1E /* AppDelegate.swift */,
 				ACA0C1AC2640A38E00AF5A1E /* SceneDelegate.swift */,
+				ACB83EBD2649AEC1000526A1 /* Constants.swift */,
 				ACA0C1B02640A38E00AF5A1E /* Main.storyboard */,
 				ACA0C1B32640A39100AF5A1E /* Assets.xcassets */,
 				ACA0C1B52640A39100AF5A1E /* LaunchScreen.storyboard */,
@@ -258,6 +261,7 @@
 				ACA0C1AD2640A38E00AF5A1E /* SceneDelegate.swift in Sources */,
 				AC96966D2640B5A900BE82D6 /* OnboardingCollectionViewCell.swift in Sources */,
 				AC9696702641B83200BE82D6 /* OnboardingPage.swift in Sources */,
+				ACB83EBE2649AEC1000526A1 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -17,24 +17,6 @@ class OnboardingViewController: UIViewController, UICollectionViewDataSource, UI
     
     weak var delegate: OnboardingCoordinatorDelegate?
     
-    let pages: [OnboardingPage] =
-        [OnboardingPage(imageName: "onboarding0",
-                        title: "Ocean Blue Mission",
-                        description: "Join us for a mission that's as vast, critical, and inspiring as the Ocean itself.",
-                        buttonText: "Join Us!"),
-        OnboardingPage(imageName: "onboarding1",
-                       title: "One World Ocean",
-                       description: "Every stream, river, and ocean is part of a single global ecosystem: One World Ocean.",
-                       buttonText: "Get Ready!"),
-        OnboardingPage(imageName: "onboarding2",
-                       title: "Pick up 3 for the Sea",
-                       description: "Pick up at least 3 pieces of plastic daily at your neighborhood park, river, beach, or sidewalk and keep track of your impact!",
-                       buttonText: "Get Set!"),
-        OnboardingPage(imageName: "onboarding3",
-                       title: "Save the Ocean Together",
-                       description: "Request a cleanup and Ocean Blue Project can help you organize a cleanup at your local beach or river!",
-                       buttonText: "Go!")]
-    
     
     // MARK: - Outlets
     @IBOutlet weak var collectionView: UICollectionView!
@@ -56,13 +38,13 @@ class OnboardingViewController: UIViewController, UICollectionViewDataSource, UI
     // MARK: - Collection View methods
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return pages.count
+        return onboardingPages.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "OnboardingCollectionViewCell", for: indexPath) as! OnboardingCollectionViewCell
         
-        cell.configureCell(page: pages[indexPath.item])
+        cell.configureCell(page: onboardingPages[indexPath.item])
         
         return cell
     }
@@ -92,7 +74,7 @@ class OnboardingViewController: UIViewController, UICollectionViewDataSource, UI
         
         let nextPage = pageControl.currentPage + 1
         
-        guard nextPage < pages.count else {
+        guard nextPage < onboardingPages.count else {
             delegate?.didFinish()
             return
         }
@@ -116,11 +98,11 @@ class OnboardingViewController: UIViewController, UICollectionViewDataSource, UI
         collectionView.delegate = self
         collectionView.register(UINib(nibName: "OnboardingCollectionViewCell", bundle: Bundle.main), forCellWithReuseIdentifier: "OnboardingCollectionViewCell")
         
-        pageControl.numberOfPages = pages.count
+        pageControl.numberOfPages = onboardingPages.count
     }
     
     private func updateButtonTitle() {
-        let title = pages[pageControl.currentPage].buttonText
+        let title = onboardingPages[pageControl.currentPage].buttonText
         
         self.advanceButton.setTitle(title, for: .normal)
     }
