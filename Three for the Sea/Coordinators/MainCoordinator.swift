@@ -20,7 +20,7 @@ class MainCoordinator: Coordinator {
         print("MainCoordinator started")
         
         // Show Onboarding only if this is the user's first time
-        let hasCompletedOnboarding = userDefaults.bool(forKey: "hasCompletedOnboarding")
+        let hasCompletedOnboarding = userDefaults.bool(forKey: TFSUserDefaults.hasCompletedOnboarding)
         
         switch hasCompletedOnboarding {
         case false:
@@ -47,8 +47,7 @@ class MainCoordinator: Coordinator {
 
 extension MainCoordinator: OnboardingCoordinatorDelegate {
     func didFinish() {
-        
-        userDefaults.setValue(true, forKey: "hasCompletedOnboarding")
+        userDefaults.setValue(true, forKey: TFSUserDefaults.hasCompletedOnboarding)
         
         launchHomeTabVC()
     }

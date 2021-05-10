@@ -27,3 +27,7 @@ let onboardingPages: [OnboardingPage] =
                    buttonText: "Go!")]
 
 let userDefaults = UserDefaults.standard
+
+struct TFSUserDefaults {
+    static let hasCompletedOnboarding = "hasCompletedOnboarding"
+}
