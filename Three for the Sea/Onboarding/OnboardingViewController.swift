@@ -47,14 +47,7 @@ class OnboardingViewController: UIViewController, UICollectionViewDataSource, UI
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        advanceButton.layer.cornerRadius = 18
-        
-        collectionView.backgroundColor = .white
-        collectionView.dataSource = self
-        collectionView.delegate = self
-        collectionView.register(UINib(nibName: "OnboardingCollectionViewCell", bundle: Bundle.main), forCellWithReuseIdentifier: "OnboardingCollectionViewCell")
-        
-        pageControl.numberOfPages = pages.count
+        setupUI()
         
         updateButtonTitle()
     }
@@ -89,9 +82,9 @@ class OnboardingViewController: UIViewController, UICollectionViewDataSource, UI
     
     @IBAction func pageControlChanged(_ sender: Any) {
         
-        guard let pc = sender as? UIPageControl else { return }
+        guard let pageControl = sender as? UIPageControl else { return }
         
-        collectionView.scrollToItem(at: IndexPath(item: pc.currentPage, section: 0),
+        collectionView.scrollToItem(at: IndexPath(item: pageControl.currentPage, section: 0),
                                     at: .centeredHorizontally, animated: true)
     }
     
@@ -114,6 +107,17 @@ class OnboardingViewController: UIViewController, UICollectionViewDataSource, UI
     
     
     // MARK: - Helpers
+    
+    fileprivate func setupUI() {
+        advanceButton.layer.cornerRadius = 18
+        
+        collectionView.backgroundColor = .white
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        collectionView.register(UINib(nibName: "OnboardingCollectionViewCell", bundle: Bundle.main), forCellWithReuseIdentifier: "OnboardingCollectionViewCell")
+        
+        pageControl.numberOfPages = pages.count
+    }
     
     private func updateButtonTitle() {
         let title = pages[pageControl.currentPage].buttonText
