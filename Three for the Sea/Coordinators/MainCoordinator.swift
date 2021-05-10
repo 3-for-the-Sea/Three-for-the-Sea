@@ -24,21 +24,21 @@ class MainCoordinator: Coordinator {
         
         switch hasCompletedOnboarding {
         case false:
-            let storyboardName = "Main"
-            let storyboard = UIStoryboard(name: storyboardName, bundle: nil)
-            let onboardingVC: OnboardingViewController = storyboard.instantiateViewController(identifier: "OnboardingViewController")
-            onboardingVC.delegate = self
-            
-            navigationController.setViewControllers([onboardingVC], animated: true)
+            launchOnboardingVC()
         case true:
             launchHomeTabVC()
         }
     }
     
-    private func launchHomeTabVC() {
-        let storyboardName = "Main"
-        let storyboard = UIStoryboard(name: storyboardName, bundle: nil)
-        let tabBarController: UITabBarController = storyboard.instantiateViewController(identifier: "tabBarController")
+    fileprivate func launchOnboardingVC() {
+        let onboardingVC = StoryboardScene.Main.instantiateOnboardingViewController()
+        onboardingVC.delegate = self
+        
+        navigationController.setViewControllers([onboardingVC], animated: true)
+    }
+    
+    fileprivate func launchHomeTabVC() {
+        let tabBarController = StoryboardScene.Main.instantiateTabBarController()
         tabBarController.selectedIndex = 0
         
         navigationController.setViewControllers([tabBarController], animated: true)

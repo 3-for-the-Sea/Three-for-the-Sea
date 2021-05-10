@@ -37,6 +37,7 @@
 		ACA0C1B42640A39100AF5A1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACA0C1B32640A39100AF5A1E /* Assets.xcassets */; };
 		ACA0C1B72640A39100AF5A1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACA0C1B52640A39100AF5A1E /* LaunchScreen.storyboard */; };
 		ACB83EBE2649AEC1000526A1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB83EBD2649AEC1000526A1 /* Constants.swift */; };
+		ACB83EC02649B794000526A1 /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB83EBF2649B794000526A1 /* Storyboards.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		ACA0C1B62640A39100AF5A1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ACA0C1B82640A39100AF5A1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ACB83EBD2649AEC1000526A1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		ACB83EBF2649B794000526A1 /* Storyboards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 				ACA0C1AA2640A38E00AF5A1E /* AppDelegate.swift */,
 				ACA0C1AC2640A38E00AF5A1E /* SceneDelegate.swift */,
 				ACB83EBD2649AEC1000526A1 /* Constants.swift */,
+				ACB83EBF2649B794000526A1 /* Storyboards.swift */,
 				ACA0C1B02640A38E00AF5A1E /* Main.storyboard */,
 				ACA0C1B32640A39100AF5A1E /* Assets.xcassets */,
 				ACA0C1B52640A39100AF5A1E /* LaunchScreen.storyboard */,
@@ -260,6 +263,7 @@
 				AC6C28EC2644955400420012 /* Coordinator.swift in Sources */,
 				ACA0C1AD2640A38E00AF5A1E /* SceneDelegate.swift in Sources */,
 				AC96966D2640B5A900BE82D6 /* OnboardingCollectionViewCell.swift in Sources */,
+				ACB83EC02649B794000526A1 /* Storyboards.swift in Sources */,
 				AC9696702641B83200BE82D6 /* OnboardingPage.swift in Sources */,
 				ACB83EBE2649AEC1000526A1 /* Constants.swift in Sources */,
 			);
