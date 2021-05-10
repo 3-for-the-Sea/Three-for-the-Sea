@@ -17,11 +17,7 @@ class OnboardingCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     
     
-    // MARK: - Lifecycle
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
+    // MARK: - Methods
     
     func configureCell(page: OnboardingPage) {
         titleLabel.text = page.title
