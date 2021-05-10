@@ -24,22 +24,16 @@ class MainCoordinator: Coordinator {
         let hasCompletedOnboarding = defaults.bool(forKey: "hasCompletedOnboarding")
         
         switch hasCompletedOnboarding {
-        
         case false:
-            
             let storyboardName = "Main"
             let storyboard = UIStoryboard(name: storyboardName, bundle: nil)
             let onboardingVC: OnboardingViewController = storyboard.instantiateViewController(identifier: "OnboardingViewController")
             onboardingVC.delegate = self
             
             navigationController.setViewControllers([onboardingVC], animated: true)
-            
         case true:
-            
             launchHomeTabVC()
         }
-        
-        
     }
     
     private func launchHomeTabVC() {
