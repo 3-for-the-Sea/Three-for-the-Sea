@@ -126,6 +126,37 @@
             </objects>
             <point key="canvasLocation" x="2041" y="-179"/>
         </scene>
+        <!--Sign In View Controller-->
+        <scene sceneID="Afz-jl-Qam">
+            <objects>
+                <viewController storyboardIdentifier="SignInViewController" id="m3C-3L-Oef" customClass="SignInViewController" customModule="Three_for_the_Sea" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nIu-5y-O2N">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="EfJ-O5-7US">
+                                <rect key="frame" x="41.5" y="438" width="331" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Zla-Fz-GLy"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fLA-9Z-eZa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="EfJ-O5-7US" firstAttribute="centerY" secondItem="fLA-9Z-eZa" secondAttribute="centerY" id="8BB-jd-zrQ"/>
+                            <constraint firstItem="EfJ-O5-7US" firstAttribute="centerX" secondItem="fLA-9Z-eZa" secondAttribute="centerX" id="Xbf-Gk-ce4"/>
+                            <constraint firstItem="EfJ-O5-7US" firstAttribute="width" secondItem="fLA-9Z-eZa" secondAttribute="width" multiplier="0.8" id="w5z-Kf-CWB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="signInButtonStackView" destination="EfJ-O5-7US" id="eWr-vz-ZuS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h2A-3f-67P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3629" y="-745"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="d5G-yi-qYB">
             <objects>
