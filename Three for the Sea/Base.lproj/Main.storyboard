@@ -97,18 +97,33 @@
         <!--Profile-->
         <scene sceneID="wRz-3j-QAI">
             <objects>
-                <viewController id="qsD-81-V79" sceneMemberID="viewController">
+                <viewController id="qsD-81-V79" customClass="ProfileViewController" customModule="Three_for_the_Sea" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="t2u-H6-A7h">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jane Appleseed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yij-sL-c0r">
+                                <rect key="frame" x="146" y="418" width="122" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Iyz-c4-kab"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Yij-sL-c0r" firstAttribute="centerX" secondItem="Iyz-c4-kab" secondAttribute="centerX" id="6C3-mN-Su7"/>
+                            <constraint firstItem="Yij-sL-c0r" firstAttribute="centerY" secondItem="Iyz-c4-kab" secondAttribute="centerY" id="nUy-et-LKz"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="xiN-ma-gkQ"/>
+                    <connections>
+                        <outlet property="nameLabel" destination="Yij-sL-c0r" id="IS3-yc-7x1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lda-da-gVr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2041" y="428"/>
+            <point key="canvasLocation" x="2041" y="471"/>
         </scene>
         <!--Home-->
         <scene sceneID="Nfv-40-QIO">

@@ -9,7 +9,15 @@
 import UIKit
 import AuthenticationServices
 
+protocol SignInCoordinatorDelegate: AnyObject {
+    func didSignIn(with appleIDCredential: ASAuthorizationAppleIDCredential)
+}
+
 class SignInViewController: UIViewController {
+    
+    // MARK: - Properties
+    
+    weak var delegate: SignInCoordinatorDelegate?
     
     // MARK: - Outlets
     
@@ -43,7 +51,31 @@ class SignInViewController: UIViewController {
 }
 
 extension SignInViewController: ASAuthorizationControllerDelegate {
-    
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
+        switch authorization.credential {
+        case let appleIDCredential as ASAuthorizationAppleIDCredential:
+            
+            // Show the Tab Bar Controller
+            delegate?.didSignIn(with: appleIDCredential)
+            
+            // For the purpose of this demo app, show the Apple ID credential information in the `ResultViewController`.
+//            showResultViewController(userIdentifier: userIdentifier, fullName: fullName, email: email)
+            
+        //            case let passwordCredential as ASPasswordCredential:
+        //
+        //                // Sign in using an existing iCloud Keychain credential.
+        //                let username = passwordCredential.user
+        //                let password = passwordCredential.password
+        //
+        //                // For the purpose of this demo app, show the password credential as an alert.
+        //                DispatchQueue.main.async {
+        //                    self.showPasswordCredentialAlert(username: username, password: password)
+        //                }
+        
+        default:
+            break
+        }
+    }
 }
 
 extension SignInViewController: ASAuthorizationControllerPresentationContextProviding {

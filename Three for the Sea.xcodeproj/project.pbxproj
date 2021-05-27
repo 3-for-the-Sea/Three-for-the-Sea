@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AC3E8954265C19A500B76C26 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3E8953265C19A500B76C26 /* SignInViewController.swift */; };
+		AC4569722660535A001722B6 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4569712660535A001722B6 /* UserController.swift */; };
 		AC49B70626433FF600FF3F60 /* Raleway-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC49B70426433EA600FF3F60 /* Raleway-Black.ttf */; };
 		AC49B70726433FFA00FF3F60 /* Raleway-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC49B70326433EA600FF3F60 /* Raleway-ExtraLight.ttf */; };
 		AC49B70826433FFA00FF3F60 /* Raleway-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC49B70226433EA500FF3F60 /* Raleway-SemiBoldItalic.ttf */; };
@@ -39,11 +40,14 @@
 		ACA0C1B72640A39100AF5A1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACA0C1B52640A39100AF5A1E /* LaunchScreen.storyboard */; };
 		ACB83EBE2649AEC1000526A1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB83EBD2649AEC1000526A1 /* Constants.swift */; };
 		ACB83EC02649B794000526A1 /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB83EBF2649B794000526A1 /* Storyboards.swift */; };
+		ACE1CEEF265ED5FA00ECD635 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE1CEEE265ED5FA00ECD635 /* ProfileViewController.swift */; };
+		ACE1CEF1265EFF8C00ECD635 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE1CEF0265EFF8C00ECD635 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AC3E8953265C19A500B76C26 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		AC3E8955265C1AD400B76C26 /* Three for the Sea.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Three for the Sea.entitlements"; sourceTree = "<group>"; };
+		AC4569712660535A001722B6 /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		AC49B6F426433EA500FF3F60 /* Raleway-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Bold.ttf"; sourceTree = "<group>"; };
 		AC49B6F526433EA500FF3F60 /* Raleway-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Italic.ttf"; sourceTree = "<group>"; };
 		AC49B6F626433EA500FF3F60 /* Raleway-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Light.ttf"; sourceTree = "<group>"; };
@@ -77,6 +81,8 @@
 		ACA0C1B82640A39100AF5A1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ACB83EBD2649AEC1000526A1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		ACB83EBF2649B794000526A1 /* Storyboards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
+		ACE1CEEE265ED5FA00ECD635 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		ACE1CEF0265EFF8C00ECD635 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				AC3E8953265C19A500B76C26 /* SignInViewController.swift */,
+				ACE1CEF0265EFF8C00ECD635 /* User.swift */,
+				AC4569712660535A001722B6 /* UserController.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -170,6 +178,7 @@
 				ACA0C1AC2640A38E00AF5A1E /* SceneDelegate.swift */,
 				ACB83EBD2649AEC1000526A1 /* Constants.swift */,
 				ACB83EBF2649B794000526A1 /* Storyboards.swift */,
+				ACE1CEEE265ED5FA00ECD635 /* ProfileViewController.swift */,
 				ACA0C1B02640A38E00AF5A1E /* Main.storyboard */,
 				ACA0C1B32640A39100AF5A1E /* Assets.xcassets */,
 				ACA0C1B52640A39100AF5A1E /* LaunchScreen.storyboard */,
@@ -275,8 +284,11 @@
 				ACA0C1AB2640A38E00AF5A1E /* AppDelegate.swift in Sources */,
 				AC6C28EC2644955400420012 /* Coordinator.swift in Sources */,
 				ACA0C1AD2640A38E00AF5A1E /* SceneDelegate.swift in Sources */,
+				AC4569722660535A001722B6 /* UserController.swift in Sources */,
 				AC96966D2640B5A900BE82D6 /* OnboardingCollectionViewCell.swift in Sources */,
+				ACE1CEEF265ED5FA00ECD635 /* ProfileViewController.swift in Sources */,
 				ACB83EC02649B794000526A1 /* Storyboards.swift in Sources */,
+				ACE1CEF1265EFF8C00ECD635 /* User.swift in Sources */,
 				AC9696702641B83200BE82D6 /* OnboardingPage.swift in Sources */,
 				AC3E8954265C19A500B76C26 /* SignInViewController.swift in Sources */,
 				ACB83EBE2649AEC1000526A1 /* Constants.swift in Sources */,
