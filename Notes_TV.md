@@ -1,5 +1,12 @@
 # Notes from Theo
 
+## Testing
+
+### Test on iOS Device, not Simulator
+
+Sign in with Apple will fail if you use Simulator
+
+
 ## Onboarding
 
 ### Tutorial: Onboarding using CollectionView

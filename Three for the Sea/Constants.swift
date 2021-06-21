@@ -30,4 +30,5 @@ let userDefaults = UserDefaults.standard
 
 struct TFSUserDefaults {
     static let hasCompletedOnboarding = "hasCompletedOnboarding"
+    static let currentUser = "currentUser"
 }

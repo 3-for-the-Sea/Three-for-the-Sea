@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AuthenticationServices
 
 class MainCoordinator: Coordinator {
     var childCoordinators = [Coordinator]()
@@ -43,12 +44,28 @@ class MainCoordinator: Coordinator {
         
         navigationController.setViewControllers([tabBarController], animated: true)
     }
+    
+    fileprivate func launchSignInVC() {
+        let signInVC = StoryboardScene.Main.instantiateSignInViewController()
+        signInVC.delegate = self
+        navigationController.setViewControllers([signInVC], animated: true)
+    }
 }
 
 extension MainCoordinator: OnboardingCoordinatorDelegate {
     func didFinish() {
         userDefaults.setValue(true, forKey: TFSUserDefaults.hasCompletedOnboarding)
         
-        launchHomeTabVC()
+        launchSignInVC()
+    }
+}
+
+extension MainCoordinator: SignInCoordinatorDelegate {
+    func didSignIn(with appleIDCredential: ASAuthorizationAppleIDCredential) {
+        UserController.shared.setCurrentUser(with: appleIDCredential)
+        
+        DispatchQueue.main.async {
+            self.launchHomeTabVC()
+        }
     }
 }

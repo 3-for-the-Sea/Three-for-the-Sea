@@ -28,5 +28,13 @@ struct StoryboardScene {
             
             return storyboard.instantiateViewController(identifier: StoryboardScene.Main.tabBarController.rawValue)
         }
+        
+        case SignInViewController
+        static func instantiateSignInViewController() -> SignInViewController {
+            
+            let storyboard = UIStoryboard(name: storyboardName, bundle: nil)
+            
+            return storyboard.instantiateViewController(identifier: StoryboardScene.Main.SignInViewController.rawValue)
+        }
     }
 }
