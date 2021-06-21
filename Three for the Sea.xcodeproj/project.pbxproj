@@ -33,7 +33,6 @@
 		AC96966E2640B5A900BE82D6 /* OnboardingCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC96966C2640B5A900BE82D6 /* OnboardingCollectionViewCell.xib */; };
 		AC9696702641B83200BE82D6 /* OnboardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC96966F2641B83200BE82D6 /* OnboardingPage.swift */; };
 		ACA0C1AB2640A38E00AF5A1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA0C1AA2640A38E00AF5A1E /* AppDelegate.swift */; };
-		ACA0C1AD2640A38E00AF5A1E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA0C1AC2640A38E00AF5A1E /* SceneDelegate.swift */; };
 		ACA0C1AF2640A38E00AF5A1E /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA0C1AE2640A38E00AF5A1E /* OnboardingViewController.swift */; };
 		ACA0C1B22640A38E00AF5A1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACA0C1B02640A38E00AF5A1E /* Main.storyboard */; };
 		ACA0C1B42640A39100AF5A1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACA0C1B32640A39100AF5A1E /* Assets.xcassets */; };
@@ -73,7 +72,6 @@
 		AC96966F2641B83200BE82D6 /* OnboardingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPage.swift; sourceTree = "<group>"; };
 		ACA0C1A72640A38E00AF5A1E /* Three for the Sea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Three for the Sea.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACA0C1AA2640A38E00AF5A1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		ACA0C1AC2640A38E00AF5A1E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		ACA0C1AE2640A38E00AF5A1E /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		ACA0C1B12640A38E00AF5A1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ACA0C1B32640A39100AF5A1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -175,7 +173,6 @@
 				AC6C28EA264494F600420012 /* Coordinators */,
 				AC49B7182643462000FF3F60 /* Onboarding */,
 				ACA0C1AA2640A38E00AF5A1E /* AppDelegate.swift */,
-				ACA0C1AC2640A38E00AF5A1E /* SceneDelegate.swift */,
 				ACB83EBD2649AEC1000526A1 /* Constants.swift */,
 				ACB83EBF2649B794000526A1 /* Storyboards.swift */,
 				ACE1CEEE265ED5FA00ECD635 /* ProfileViewController.swift */,
@@ -283,7 +280,6 @@
 				AC6C28EE264495C900420012 /* MainCoordinator.swift in Sources */,
 				ACA0C1AB2640A38E00AF5A1E /* AppDelegate.swift in Sources */,
 				AC6C28EC2644955400420012 /* Coordinator.swift in Sources */,
-				ACA0C1AD2640A38E00AF5A1E /* SceneDelegate.swift in Sources */,
 				AC4569722660535A001722B6 /* UserController.swift in Sources */,
 				AC96966D2640B5A900BE82D6 /* OnboardingCollectionViewCell.swift in Sources */,
 				ACE1CEEF265ED5FA00ECD635 /* ProfileViewController.swift in Sources */,
